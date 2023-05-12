@@ -1,12 +1,12 @@
 .heroes {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 15em;
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
 }
 
 .heroes li {
-    display: flex;
+  display: flex;
 }
 
 .heroes button {
@@ -14,7 +14,7 @@
   cursor: pointer;
   position: relative;
   left: 0;
-  background-color: #EEE;
+  background-color: #eee;
   margin: 0.5em;
   padding: 0;
   border-radius: 4px;
@@ -51,13 +51,13 @@
 
 .heroes .badge {
   display: inline-block;
-font-size: small;
-color: white;
-padding: 0.8em 0.7em 0 0.7em;
-background-color: #405061;
-line-height: 1em;
-margin-right: 0.8em;
-border-radius: 4px 0 0 4px;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #405061;
+  line-height: 1em;
+  margin-right: 0.8em;
+  border-radius: 4px 0 0 4px;
 }
 
 .heroes .name {
