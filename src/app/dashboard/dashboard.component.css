@@ -3,9 +3,9 @@ h2 {
 }
 
 .heroes-menu {
-  padding:0;
-  margin:auto;
-  max-width:1000px;
+  padding: 0;
+  margin: auto;
+  max-width: 1000px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

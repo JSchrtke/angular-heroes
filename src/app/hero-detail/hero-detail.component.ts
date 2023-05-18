@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./hero-detail.component.css'],
 })
 export class HeroDetailComponent {
-  constructor(private route: ActivatedRoute, private heroService: HeroService, private location: Location) { }
+  constructor(private route: ActivatedRoute, private heroService: HeroService, private location: Location) {}
 
   ngOnInit(): void {
     this.getHero();
