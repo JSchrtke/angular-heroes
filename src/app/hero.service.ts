@@ -35,19 +35,25 @@ export class HeroService {
   getHero(id: number): Observable<Hero> {
     return this.httpClient
       .get<Hero>(`${this.heroesUrl}/${id}`)
-      .pipe(tap((_) => this.log(`fetched hero id=${id}`), catchError(this.handleError<Hero>('getHero'))));
+      .pipe(tap(() => this.log(`fetched hero id=${id}`), catchError(this.handleError<Hero>('getHero'))));
   }
 
   updateHero(hero: Hero): Observable<Hero> {
     const response = this.httpClient
       .post<Hero>(`${this.heroesUrl}/${hero.id}`, hero, this.httpOptions)
-      .pipe(tap((_) => this.log(`fetched hero id=${hero.id}`), catchError(this.handleError<Hero>('updateHero'))));
+      .pipe(tap(() => this.log(`updated hero id=${hero.id}`), catchError(this.handleError<Hero>('updateHero'))));
     return response;
   }
 
   addHero(hero: Hero): Observable<Hero> {
     return this.httpClient
       .post<Hero>(`${this.heroesUrl}/${hero.id}`, hero)
-      .pipe(tap((_) => this.log(`added hero with id=${hero.id}`), catchError(this.handleError<Hero>('updateHero'))));
+      .pipe(tap(() => this.log(`added hero with id=${hero.id}`), catchError(this.handleError<Hero>('addHero'))));
+  }
+
+  deleteHero(heroId: number): Observable<any> {
+    return this.httpClient
+      .delete<Hero>(`${this.heroesUrl}/${heroId}`)
+      .pipe(tap(() => this.log(`deleted hero with id=${heroId}`), catchError(this.handleError<Hero>('addHero'))));
   }
 }

@@ -33,4 +33,9 @@ export class HeroesComponent {
     };
     this.heroService.addHero(newHero).subscribe((hero) => this.heroes.push(hero));
   }
+
+  deleteHero(heroId: number): void {
+    console.log('clicked delete');
+    this.heroService.deleteHero(heroId).subscribe(() => this.getHeroes());
+  }
 }
