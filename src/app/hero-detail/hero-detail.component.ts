@@ -28,6 +28,9 @@ export class HeroDetailComponent {
   }
 
   save(): void {
-    this.heroService.updateHero(this.hero!).subscribe((_) => this.goBack());
+    if (this.hero === undefined) {
+      return;
+    }
+    this.heroService.updateHero(this.hero).subscribe(() => this.goBack());
   }
 }
